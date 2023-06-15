@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Run a failing step
+      run: exit 1
+        
     - name: Send Slack notification
       if: failure()
       env:
